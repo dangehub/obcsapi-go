@@ -1,0 +1,13 @@
+     # .air.toml
+     root = "."
+     tmp_dir = "tmp"
+
+     [build]
+       bin = "tmp/main.exe"  # 可执行文件的输出路径
+       cmd = "go build -o tmp/main.exe"  # 构建命令
+       include_ext = ["go"]  # 监视的文件扩展名
+       exclude_dir = ["assets", "vendor"]  # 排除的目录
+
+     [watch]
+       include = ["**/*.go"]  # 监视的文件
+       exclude = ["tmp/**"]  # 排除的文件

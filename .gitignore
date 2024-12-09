@@ -9,7 +9,10 @@ server/config.yaml
 server/images
 server/tem.file
 # 可执行文件
+tmp/
 server/server
+mykv.db.lock
+server/tmp
 server/webdav/
 server/website/
 server/output/
