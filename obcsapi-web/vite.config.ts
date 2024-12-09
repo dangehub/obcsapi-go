@@ -26,6 +26,10 @@ export default defineConfig({
       ]
     }
   })],
+  server: {
+    host: '0.0.0.0', // 设置为0.0.0.0以监听所有网络接口
+    port: 5173 // 你可以根据需要更改端口
+  },
   base: "/web/",
   resolve: {
     alias: {
