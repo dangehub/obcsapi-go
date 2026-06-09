@@ -9,7 +9,6 @@ RUN go build -o server  -ldflags '-linkmode "external" -extldflags "-static"' . 
 RUN mkdir app && mkdir app/static/ && \
     cp server app/ && cp docker-entrypoint.sh app/ && \
     cp -R static/ app/ && \
-    cp -R website/ app/ && \
     cp -R sh/ app/ && \
     cp -R script/ app/ && \
     chmod +x app/docker-entrypoint.sh && \
