@@ -256,11 +256,14 @@ func ObTodayPostHandler(c *gin.Context) {
 	gr.Success(c)
 }
 
-// 每天凌晨 00:00 - 03:59  判断为 today daily 为 昨天的日志
+// 每天凌晨 00:00 - 03:59 判断为 yesterday（默认关闭，0点即作为新的一天）
+// 可通过配置 delay_daily_rollover_to_4am: true 来开启原本的凌晨4点跨天特性
 func ObTodayAddDateNum() int {
-	hour := time.Now().Hour()
-	if hour >= 0 && hour <= 3 {
-		return -1
+	if viper.GetBool("delay_daily_rollover_to_4am") {
+		hour := time.Now().Hour()
+		if hour >= 0 && hour <= 3 {
+			return -1
+		}
 	}
 	return 0
 }
