@@ -11,10 +11,10 @@ hero:
       text: 文档
       link: /md/README
     - theme: alt
-      text: Gitee 源码
-      link: https://gitee.com/kkbt/obcsapi-go
+      text: GitHub 源码
+      link: https://github.com/dangehub/obcsapi-go
     - theme: alt
-      text: Github 源码
+      text: 上游源码
       link: https://github.com/kkbt0/obcsapi-go
 
 features:
@@ -25,4 +25,3 @@ features:
   - title: 高级
     details: 使用 Bash / Lua 脚本拓展功能，处理请求和定时任务
 ---
-

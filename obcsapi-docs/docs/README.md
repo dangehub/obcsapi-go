@@ -16,7 +16,7 @@ actions:
     type: primary
 
   - text: 源码
-    link: https://gitee.com/kkbt/obcsapi-go
+    link: https://github.com/dangehub/obcsapi-go
 
 highlights:
   - header: 功能

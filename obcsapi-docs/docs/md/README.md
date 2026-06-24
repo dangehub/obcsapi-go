@@ -1,8 +1,10 @@
 ---
 title: Obcsapi 文档
 index: false
-icon: laptop-code 
+icon: laptop-code
 ---
+
+> 本文档基于 [恐咖兵糖 (kkbt) 原版文档](https://www.ftls.xyz/docs/obcsapi/) 二次构建，内容保持一致并增加本 fork 的相关说明。
 
 Obsidian Cloud Storage API 文档
 
@@ -31,14 +33,6 @@ Back-end APIs based on Obsidian S3 storage , CouchDb Local and WebDAV can save m
 - WebDAV 服务
 - 一个简易图床，附带命令行上传工具。<sup>1</sup>
 - 云函数 或者 Dokcer 部署
-
-**注意如果文档由于浏览器缓存，或者更新不及时无法查看最新内容。请到项目 https://gitee.com/kkbt/obcsapi-go/tree/master/obcsapi-docs/docs 中查看**
-
-
-两个版本:  
-[Obsidian 云存储后端 API Go 版本](https://gitee.com/kkbt/obcsapi-go)
-[Obsidian S3 存储的后端 API python 版本](https://gitee.com/kkbt/obsidian-csapi)  
-
 
 |                                          | python           | go             |
 | ---------------------------------------- | ---------------- | -------------- |
@@ -72,13 +66,9 @@ Python 版本容易在阿里云-云函数服务处修改和部署，使用者完
 
 相关链接:
 
-Docker [https://hub.docker.com/r/kkbt/obcsapi](https://hub.docker.com/r/kkbt/obcsapi)
-
+上游项目 Docker: [https://hub.docker.com/r/ghcr.io/dangehub/obcsapi-go](https://hub.docker.com/r/ghcr.io/dangehub/obcsapi-go)
 博客教程及效果（小白图文版）: [https://www.ftls.xyz/posts/obcsapi-fc-simple/](https://www.ftls.xyz/posts/obcsapi-fc-simple/)
 视频效果演示和 Python 版部署教程：[Obsidian 从本地到云端-哔哩哔哩](https://b23.tv/uJFvw3A)
-
-前端 Demo [https://kkbt.gitee.io/obweb/#/Memos](https://kkbt.gitee.io/obweb/#/Memos) 第一次加载不正常显示，后端加载慢属于正常现象。
-
 
 ---
 
@@ -88,6 +78,3 @@ Docker [https://hub.docker.com/r/kkbt/obcsapi](https://hub.docker.com/r/kkbt/obc
 [4] 类似 ReadWise API 增加接口
 [5] 本地服务 LocalStorage 本地存储，开启 Webdav 服务为 Remotely Save 提供同步。同时 WebDav 服务可连接 RAIDrive (Windows) ， Mix (安卓) 等进行文件管理。
 [6] Go 版本支持 Web 网页，S3 支持 Obsidian 库内的图片链接（需要基于库的路径或相对路径）。CouchDb,Local 也支持。
-
----
-

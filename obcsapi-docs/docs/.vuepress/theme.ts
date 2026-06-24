@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "https://gitee.com/kkbt/obcsapi-go",
+  repo: "https://github.com/dangehub/obcsapi-go",
 
   docsDir: "src",
 

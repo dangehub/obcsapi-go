@@ -5,12 +5,13 @@ export default defineConfig({
   title: "Obcsapi",
   description: "Obsidian 云存储 API",
   base: "/obcsapi-go/",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Doc", link: "/md/README" },
-      { text: "Docs", link: "//www.ftls.xyz/docs/", target: "_blank" },
+      { text: "首页", link: "/" },
+      { text: "文档", link: "/md/README" },
+      { text: "上游文档", link: "https://www.ftls.xyz/docs/obcsapi/", target: "_blank" },
     ],
     search: {
       provider: "local",
@@ -36,6 +37,10 @@ export default defineConfig({
         ],
       },
       {
+        text: "📢 分叉说明",
+        link: "/md/go-version/11-分叉说明",
+      },
+      {
         text: "Go 版本 Swagger(Scalar)",
         link: "/swagger/swagger",
         target: "_blank",
@@ -51,17 +56,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      {
-        icon: {
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" role="img"><path d="M11.984 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.016 0zm6.09 5.333c.328 0 .593.266.592.593v1.482a.594.594 0 0 1-.593.592H9.777c-.982 0-1.778.796-1.778 1.778v5.63c0 .327.266.592.593.592h5.63c.982 0 1.778-.796 1.778-1.778v-.296a.593.593 0 0 0-.592-.593h-4.15a.592.592 0 0 1-.592-.592v-1.482a.593.593 0 0 1 .593-.592h6.815c.327 0 .593.265.593.592v3.408a4 4 0 0 1-4 4H5.926a.593.593 0 0 1-.593-.593V9.778a4.444 4.444 0 0 1 4.445-4.444h8.296z"/></svg>',
-        },
-        link: "https://gitee.com/kkbt/obcsapi-go",
-      },
-      { icon: "github", link: "https://github.com/kkbt0/obcsapi-go" },
+      { icon: "github", link: "https://github.com/dangehub/obcsapi-go" },
     ],
     footer: {
       copyright:
-        '版权所有 © 2024 <a href="https://www.ftls.xyz/" target="_blank">恐咖兵糖</a>',
+        '基于恐咖兵糖原作的二次修改版 — <a href="https://github.com/kkbt0/obcsapi-go" target="_blank">上游源码</a>',
     },
   },
   // TODO

@@ -1,68 +1,47 @@
-# Obsidian 云存储的后端 API Golang 版本
+# Obcsapi Go
 
-Back-end APIs based on Obsidian S3 storage , CouchDb Local and WebDAV can save messages to the Obsidian library with the help of the Obsidian plugin Remotely-Save plugin, or Self-hosted LiveSync (ex:Obsidian-livesync) plugin CouchDb mode.Or a text editor that supports local folders. peculiarity
+> 本仓库是 [kkbt/obcsapi-go](https://github.com/kkbt0/obcsapi-go) 的**二次修改版**，保留原项目名称以表对原作者的尊重。
+> 如需原版请访问上游仓库。
 
-- Add Memos / Short Answer Editor on the front end, support instruction mode, have dark theme, and be a PWA app
-- WeChat MP to Obsidian
-- Support for SimpRead Webook to crop web articles
-- Support FooView hoverball text picture sharing and saving
-- MoonReader highlights
-- Universal HTTP API
-- Extend functionality with Lua & Bash . Users can process any request
-- WebDAV Server
-- A simple graph bed with a command line upload tool. <sup>1</sup>
-- SCF or Dokcer deployment
+基于 Obsidian S3 存储、CouchDb、本地存储和 WebDAV 的后端 API。可借助 Obsidian 插件 Remotely-Save 或 Self-hosted LiveSync 保存消息到 Obsidian 库，也支持本地文件夹的文本编辑器。
 
-基于 Obsidian S3 存储， CouchDb ，本地存储和WebDAV 的后端 API ,可借助 Obsidian 插件 Remotely-Save 插件，或者 Self-hosted LiveSync (ex:Obsidian-livesync) 插件 CouchDb 方式，保存消息到 Obsidian 库。或者支持本地文件夹的文本编辑器。特点
+## 特点
 
-- 前端添加 Memos / 简答编辑 ， 支持指令模式，有黑暗主题 ，是 PWA 应用
-- 微信测试号 微信到 Obsidian
-- 支持简悦 SimpRead Webook 裁剪网页文章
-- 支持 fv悬浮球文字图片分享保存
-- 静读天下 MoonReader 高亮标注 仿 ReadWise API
-- 通用 http api
-- 使用 Lua & Bash 拓展功能。用户可以处理任何请求
+- 前端 Memos / 简答编辑器，支持指令模式、黑暗主题、PWA 应用
+- 微信测试号 → Obsidian
+- 简悦 SimpRead Webhook 裁剪网页文章
+- FV 悬浮球文字图片分享保存
+- 静读天下 MoonReader 高亮标注
+- 通用 HTTP API
+- 使用 Lua & Bash 拓展功能
 - WebDAV 服务
-- 一个简易图床，附带命令行上传工具。<sup>1</sup>
-- 云函数 或者 Dokcer 部署
+- 简易图床，附带命令行上传工具
+- SCF 或 Docker 部署
 
+## 与本版相比的改动
 
-更多功能说明见文档: [https://www.ftls.xyz/docs/obcsapi/](https://www.ftls.xyz/docs/obcsapi/)
+详见文档：[分叉说明](https://dangehub.github.io/obcsapi-go/md/go-version/11-分叉说明)
 
----
+## 文档
 
-文档 Docs : [https://www.ftls.xyz/docs/obcsapi/](https://www.ftls.xyz/docs/obcsapi/)
-如果你不使用 Obsidian ，也可以借助坚果云，或者 WebDav 进行文件同步，配合其他文本编辑器使用。
+文档基于上游文档二次构建：
 
-![](obcsapi-docs/docs/images/default_canvas.svg)
+- GitHub Pages: https://dangehub.github.io/obcsapi-go/
+- 上游文档: https://www.ftls.xyz/docs/obcsapi/
 
-绘图 PowerBy [Handraw](https://handraw.top/)
+## 部署
 
-![](obcsapi-docs/docs/images/canvas_2_show.svg)
+```bash
+# Docker
+docker run -d -p 8900:8900 --name obcsapi \
+  -v /your/obsidian/vault/:/app/data/webdav/note/ \
+  ghcr.io/dangehub/obcsapi-go:latest
 
+# 本地构建
+cd server/
+go run .
+```
 
+## 鸣谢
 
-## 展示
-
-### PWA Web 应用
-
-![](obcsapi-docs/docs/images/Snipaste_2023-05-09_21-21-34.png)
-
-![](obcsapi-docs/docs/images/Snipaste_2023-05-09_21-22-36.png)
-
-![](obcsapi-docs/docs/images/Snipaste_2023-05-09_21-26-04.png)
-
-![](obcsapi-docs/docs/images/Snipaste_2023-05-09_21-26-13.png)
-
-### Tauri 桌面端应用 
-
-[Tauri 可以构建跨平台的快速、安全、前端隔离应用](https://tauri.app/zh-cn/)。图片为 桌面端应用  - Windows - 虽然大概直接用 Obsidian 更方便一些。
-
-![](obcsapi-docs/docs/images/Snipaste_2023-08-01_12-57-50-tauri-windows.png)
-
-可从 [https://gitee.com/kkbt/obcsapi-go/releases](https://gitee.com/kkbt/obcsapi-go/releases) 下载
-
-## 其他
-
-python 老版本 https://gitee.com/kkbt/obsidian-csapi 
-发展历程: [obsidian-使用指南](https://www.ftls.xyz/series/obsidian-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/)
+- [恐咖兵糖 (kkbt)](https://github.com/kkbt0) — 原版作者

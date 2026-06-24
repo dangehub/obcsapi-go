@@ -6,7 +6,7 @@ export default navbar([
   {
     text: "代码 Gitee",
     icon: "link",
-    link: "https://gitee.com/kkbt/obcsapi-go",
+    link: "https://github.com/dangehub/obcsapi-go",
   },
   {
     text: "代码 Github",
