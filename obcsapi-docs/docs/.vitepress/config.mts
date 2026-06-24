@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Obcsapi",
   description: "Obsidian 云存储 API",
-  base: "/docs/obcsapi/",
+  base: "/obcsapi-go/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
